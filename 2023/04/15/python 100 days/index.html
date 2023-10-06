@@ -1,0 +1,413 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>python 100 days | SHENZAOYI'BLOG</title><meta name="author" content="shenzaoyi"><meta name="copyright" content="shenzaoyi"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="python 100 days那些年遇到的报错  IndentationalError :unexpected indent  检查空格把 invalid sytantax : 语法错误  range()输出一些数字 可以省略：  没有step 默认为1 没有start 默认为0 不包括最后一个数字，如range(4):0，1，2，3  for i in range(5): ​	0-4 for i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python 100 days">
+<meta property="og:url" content="https://shenzaoyi.github.io/2023/04/15/python%20100%20days/index.html">
+<meta property="og:site_name" content="SHENZAOYI&#39;BLOG">
+<meta property="og:description" content="python 100 days那些年遇到的报错  IndentationalError :unexpected indent  检查空格把 invalid sytantax : 语法错误  range()输出一些数字 可以省略：  没有step 默认为1 没有start 默认为0 不包括最后一个数字，如range(4):0，1，2，3  for i in range(5): ​	0-4 for i">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-04-15T14:16:39.750Z">
+<meta property="article:modified_time" content="2023-08-08T08:13:16.018Z">
+<meta property="article:author" content="shenzaoyi">
+<meta property="article:tag" content="个人博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://shenzaoyi.github.io/2023/04/15/python%20100%20days/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'python 100 days',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-08 16:13:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="SHENZAOYI'BLOG"><span class="site-name">SHENZAOYI'BLOG</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">python 100 days</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-15T14:16:39.750Z" title="发表于 2023-04-15 22:16:39">2023-04-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-08T08:13:16.018Z" title="更新于 2023-08-08 16:13:16">2023-08-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="python 100 days"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="python-100-days"><a href="#python-100-days" class="headerlink" title="python 100 days"></a>python 100 days</h1><p><strong>那些年遇到的报错</strong></p>
+<ol>
+<li>IndentationalError :unexpected indent  检查空格把</li>
+<li>invalid sytantax : 语法错误</li>
+</ol>
+<h3 id="range"><a href="#range" class="headerlink" title="range()"></a>range()</h3><p>输出一些数字</p>
+<p>可以省略：</p>
+<ol>
+<li>没有step 默认为1</li>
+<li>没有start 默认为0</li>
+<li>不包括最后一个数字，如range(4):0，1，2，3</li>
+</ol>
+<p>for i in range(5):</p>
+<p>​	0-4</p>
+<p>for i in range(-5,5)</p>
+<p>-5 - 4</p>
+<p>for i in range (start ,end ,step) - start 开始，end 结束 ，step  - 步长</p>
+<ul>
+<li>range 只是一组迭代数，list()函数可转化为列表</li>
+</ul>
+<p>关序列的for 遍历：</p>
+<p><strong>序列</strong>：列表 - 元组 - 字典 - 集合 - 字符串</p>
+<p>序列索引：1. 从0 开始 s[3]  2. 可以为负数，从-1 开始</p>
+<p>切片： sname[start: end:step]均可省略，冒号不能省，但step 可以省略冒号</p>
+<p>序列相加： 1. 只能是同类型，列表+列表，元组+元组	 2. 如果重复，仍然直接输出</p>
+<p>序列相乘： 1. 数乘 – 将原来序列重复N次，重要的事多说几遍 	</p>
+<p>检查是否存在： value in sname ,in 关键字 ，返回bool值，还有not in </p>
+<p>计算序列长度 &amp; 最大值： 1.  len(),不管中文汉字还是字符，都当作一个字符 	2. max(),求最大值，min()	3. list()将序列转换为列表，str(),将序列转换为字符串。sun() ,sorted(),reversed()反转序列中元素，enumerate().</p>
+<p><strong>列表</strong></p>
+<ol>
+<li>创建 &amp; 删除</li>
+</ol>
+<ul>
+<li>赋值运算符： list &#x3D; [1,2,3]</li>
+<li>空列表： emptylist &#x3D; []</li>
+<li>数值列表： range()函数，range(start,end,step)</li>
+<li>del name 删除</li>
+</ul>
+<ol start="2">
+<li>访问</li>
+</ol>
+<ul>
+<li><p>print 输出</p>
+</li>
+<li><p>索引</p>
+</li>
+<li><p>切片</p>
+</li>
+</ul>
+<ol start="3">
+<li>安抚</li>
+</ol>
+<ul>
+<li><p>遍历列表</p>
+<p>for i in name:</p>
+<p>​	block </p>
+</li>
+<li><p>输出索引</p>
+</li>
+</ul>
+<p>for index i in enmerrate(listname):&#x2F;&#x2F;第一个参数index 为索引，第二个为值</p>
+<ol start="4">
+<li>更新列表</li>
+</ol>
+<ul>
+<li>append()  - listname.append(newval),添加到末尾，注意，append执行是在原来列表上，不用重新赋值，如a &#x3D; a.append(10),a 就不是列表，此时a 值为none ,类型为nonetype</li>
+<li>指定位置：insert(index,val),执行效率没有append 高</li>
+<li>extend(列表),将列表添加到原来列表</li>
+</ul>
+<ol start="5">
+<li><p>修改元素  </p>
+<ul>
+<li>根据索引修改：删除：del name[-1]  – 删除最后一个</li>
+<li>根据值修改：name.remove(val)</li>
+</ul>
+</li>
+<li><p>发送</p>
+</li>
+</ol>
+<ul>
+<li>listname.count(obj)  - 精确匹配，某元素出现次数</li>
+<li>name.index(),求指定元素首次出现索引，若不存在则抛出异常，</li>
+<li>sum(),不用加list.sum(listname,start) - start 表示初始值，如果start 是100 则答案加100</li>
+</ul>
+<ol start="7">
+<li>排序</li>
+</ol>
+<p>list.sort(key &#x3D; ,reverse&#x3D; false)</p>
+<h3 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h3><p><strong>闭包</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">outer</span>():</span><br><span class="line">    x = <span class="number">1</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>():</span><br><span class="line">        <span class="built_in">print</span>(x)</span><br><span class="line">outer()</span><br><span class="line"><span class="comment">#执行结果为1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>函数装饰器  类装饰器</p>
+<p>不更改源代码的情况下增加函数的功能，</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dec</span>(<span class="params">func</span>):</span><br><span class="line">  <span class="comment">#1  def wrapper():</span></span><br><span class="line">   <span class="comment">#2     #这里加上增加的功能</span></span><br><span class="line">   <span class="comment">#3     print(&quot;这是增加的功能&quot;)</span></span><br><span class="line">   <span class="comment">#4     func()</span></span><br><span class="line">   <span class="comment">#5 return wrapper # 这里的讲究：必须返回一个wrappper</span></span><br><span class="line"><span class="comment"># 使用</span></span><br><span class="line"><span class="meta">@dec()</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">aaa</span>():</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+
+<p>为什么要返回wrapper,如果不返回则报错：如果没有返回，语法糖装饰的aaa()函数只是指向dec()函数，而这个函数仅仅是定义了一个函数，而没有返回任何东西，所以#1 - #4 只是定义了函数 ，#5才是返回一个对象，注意不是返回一个函数，传入的是对象而不是函数，return 的也是对象不是函数</p>
+<p><strong>原理</strong></p>
+<ul>
+<li><p>一切皆对象</p>
+<ul>
+<li><p>装饰器装饰后的函数怎么保持原来属性 – functools</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">from functools import wraps #导入</span><br><span class="line">def dec(func):</span><br><span class="line">	@wraps(func)  # 需要func 参数，</span><br><span class="line">	def k():</span><br><span class="line">		block</span><br><span class="line">	return k</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">func.__name__</span><br><span class="line"><span class="comment">#如果不用wraps，则被装饰的函数的名字其实是装饰器里面的函数</span></span><br></pre></td></tr></table></figure>
+
+<p>执行顺序：被装饰的函数执行相当于按顺序执行装饰器</p>
+</li>
+</ul>
+</li>
+<li><p>如何处理函数带参数：</p>
+<ul>
+<li><p>直接传输</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dec</span>(<span class="params">func</span>):</span><br><span class="line"><span class="meta">    @wraps(<span class="params">func</span>)</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">k</span>):</span><br><span class="line">        <span class="comment">#增加的功能</span></span><br><span class="line">        func(k)<span class="comment">#将k 参数传递给原来参数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>利用*args **kargs 来传递参数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dec</span>(<span class="params">func</span>):</span><br><span class="line"><span class="meta">    @wraps(<span class="params">func</span>)</span></span><br><span class="line">	  <span class="keyword">def</span> <span class="title function_">inner</span>(<span class="params">*args,**kargs</span>):</span><br><span class="line">            <span class="comment">#block</span></span><br><span class="line">            func(*args,**kargs)</span><br></pre></td></tr></table></figure>
+
+<p>*args ——- 位置参数，本质是任何多个位置参数组成的元组 **kargs   ——- 关键字参数，本质是无数个关键字参数组成的字典</p>
+<blockquote>
+<p>python 中* 和 &#x2F; 的意义： &#x2F;表示它之前的是位置参数，*表示它之后的是关键字参数 ， 而她两之间无所谓</p>
+</blockquote>
+</li>
+</ul>
+<p>如何处理装饰器带参数</p>
+<p>增加一层函数，然后最高层返回第二层，第二层返回第三层，第三层接受调用</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dec</span>(<span class="params">a</span>):<span class="comment"># 这里a就是装饰器的参数</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">in</span>(<span class="params">func</span>):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">inner</span>():</span><br><span class="line">            func()</span><br><span class="line">        <span class="keyword">return</span> inner</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">in</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>进阶</strong> 用类来实现装饰器</p>
+<p><strong>python 数据类型</strong></p>
+<p>整型：</p>
+<ul>
+<li><p>没有大小限制，pow(x,y)-计算x的y次幂</p>
+</li>
+<li><p>进制：八：0b&#x2F;0B开头，二：0b&#x2F;0B,十六：0x&#x2F;0X</p>
+</li>
+</ul>
+<p>浮点型：</p>
+<ul>
+<li>存在不确定尾数</li>
+<li>round(x,z) – 对x进行四舍五入，z是截取位数</li>
+</ul>
+<p>复数：</p>
+<ul>
+<li>z &#x3D; x + yj</li>
+</ul>
+<p><strong>python运算操作符</strong></p>
+<ul>
+<li><p>加减乘除，10&#x2F;3 &#x3D; 3.3.3.3.3.3.3..3.3</p>
+</li>
+<li><p>x&#x2F;&#x2F;y返回商的整数部分 , x%y取模</p>
+</li>
+<li><p>x**y：计算x的y次幂</p>
+</li>
+<li><p>混合运算： 自动转换为高级类型</p>
+</li>
+</ul>
+<p><strong>数值运算函数</strong></p>
+<p>abs(x) – 求绝对值</p>
+<p>divmod(x,y) – 商余，同时输出商和余数</p>
+<p>pow(x,y,[z]) – (x**y)%z其中z为可选参数，表示x的y次幂再对z取余</p>
+<p>round(x,d) – x四舍五入，d表示保留几位小数，默认为0</p>
+<p>max(x,y,z…)&#x2F;min(x,y,z…)</p>
+<p>int(x)，float(x) complex(x)  – 转换，也可转换字符串</p>
+<p><strong>python字符串</strong></p>
+<ul>
+<li><p>单行字符串’’ &#x2F; “”&#x2F;&#x2F;多行字符串’’’’’’ &#x2F; “””””” 若python中出现字符串但是没有赋值给任何变量，被当作注释</p>
+</li>
+<li><p>当想字符串中有引号：则有单则用双包含，有双则单来包含，都要则三引号</p>
+</li>
+<li><p>索引 &amp; 切片</p>
+</li>
+<li><pre><code>\&#39; 这样则’远洋输出，但是有特殊的如\n \t 等不能，解决方案是字符串前面加上r 
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 字符串操作符：</span><br><span class="line"></span><br><span class="line">  -  x + y 拼接</span><br><span class="line">  - n*x  重复</span><br><span class="line">  - x in s /not in</span><br><span class="line"></span><br><span class="line">- 字符串处理函数：</span><br><span class="line">  - len(x) 计算长度，一个汉字一个字符</span><br><span class="line">  - str(x),任意类型转换为string</span><br><span class="line">  - hex(x)/oct(x) 转换为16/8进制</span><br><span class="line">  - chr(u) ,将unicode 转换为字符串，ord(x)，返回对印的字符串编码</span><br><span class="line">  - 等等</span><br><span class="line"></span><br><span class="line">- 格式化：</span><br><span class="line"></span><br><span class="line">  - 槽</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  &quot;&#123;1&#125; ahfafae&#123;0&#125;ajf&#123;&#125;&quot;.format(&#39;ajf&#39;,&#39;afsf&#39;)//0表示format方法的第0个参数
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+  &#123;&#125;输出宽度对齐方式宽度,.精度类型//注意这个逗号表示千位分隔符
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">    ^居中，&gt;右对齐，&lt;左对齐</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 异常处理</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line">try :</span><br><span class="line">	&lt;block&gt;</span><br><span class="line">except 【&lt;异常类型&gt;】:</span><br><span class="line">	&lt;block&gt;  -- 如果出现异常，则执行</span><br><span class="line">else: </span><br><span class="line">	&lt;奖励&gt;</span><br><span class="line">finally: </span><br><span class="line">    不管异常不异常都执行</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+<p><strong>关于奖励机制</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> Bool:</span><br><span class="line">    &lt;block&gt;</span><br><span class="line">    <span class="keyword">if</span> Bool :</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    &lt;这也是一个奖励&gt;</span><br><span class="line">    </span><br><span class="line">    同理：</span><br><span class="line"><span class="keyword">for</span> Bool:</span><br><span class="line">    &lt;block&gt;</span><br><span class="line"><span class="keyword">else</span>: </span><br><span class="line">    奖励</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="random库"><a href="#random库" class="headerlink" title="random库"></a>random库</h3><ul>
+<li>random.seed() — 如果不给定，则使用当前时间</li>
+<li>random.random() — 生成[0.0 ,1.0)随机数</li>
+<li>random.randint(a,b) — 随机生成a到b之间的整数</li>
+<li>randrange(m,n,[k])  —- 以k为步长的随机整数</li>
+<li>random.uniform(a,b) —- ab之间随机小数</li>
+<li>random.choice(seq) —– 从序列中随机选出</li>
+<li>random.shuffle(seq)  ——- 随机排列序列并返序列</li>
+</ul>
+<h3 id="lambda函数"><a href="#lambda函数" class="headerlink" title="lambda函数"></a>lambda函数</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">f = <span class="keyword">lambda</span> x,y :x+y</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>函数作为参数 – golang</li>
+<li>闭包</li>
+</ul>
+<h3 id="time库"><a href="#time库" class="headerlink" title="time库"></a>time库</h3><ul>
+<li><p>time.time() ———- 当前的时间戳</p>
+</li>
+<li><p>time.ctime() ————-返回字符串</p>
+</li>
+<li><p>time.gmtime() ————获取struct_time格式的时间</p>
+</li>
+<li><p>时间格式化： </p>
+<ul>
+<li><p>strftime(tql,ts)——–tql:定义输出效果，ts:计算机内部gmtime函数获取的参数</p>
+</li>
+<li><p>strptime(ts，tql) ———-一些时间控制格式符，不用记太多</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">time.strftime(<span class="string">&quot;%Y-%m-%D %H %M %S&quot;</span>,time.gmtime())</span><br><span class="line">time.strptime()</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="PyInstaller库"><a href="#PyInstaller库" class="headerlink" title="PyInstaller库"></a>PyInstaller库</h3><ul>
+<li>使用命令行： pyinstaller -F wenjianm.py</li>
+</ul>
+<h3 id="python-import"><a href="#python-import" class="headerlink" title="python import"></a>python import</h3><p>module:python object,独立命名空间，大部分.py文件</p>
+<p>独立命名空间：</p>
+<p>package：特殊的module，往往对应一个文件夹</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">app/</span><br><span class="line">	test.py</span><br><span class="line">   hello.py</span><br><span class="line"><span class="comment">#在test.py下：</span></span><br><span class="line"><span class="keyword">import</span> hello <span class="comment">#会在path里面找名叫test的东西，sys.py/path顺序为优先test.py所在文件夹，然后是其他内置或者额外安装的</span></span><br><span class="line"><span class="comment"># 同时，import的时候，会在单独命名空间 **运行** hello.py，然后将hello.py赋值给hello，但是注意，他只会运行一次这个代码，之后就把他缓存起来</span></span><br><span class="line"><span class="comment">#也可以：</span></span><br><span class="line"><span class="keyword">import</span> hello <span class="keyword">as</span> t <span class="comment">#把hello赋值给t.</span></span><br><span class="line"><span class="comment">#如果在hello.py里面有A类：</span></span><br><span class="line"><span class="keyword">from</span> hello <span class="keyword">import</span> A </span><br><span class="line"><span class="keyword">from</span> hello <span class="keyword">import</span> A <span class="keyword">as</span> t</span><br><span class="line"><span class="comment">#当尝试import package的时候，他会首先查看有没有__init__.py文件，有就运行。如果没有，不会运行任何额外代码</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>absolute import：</p>
+<p>relative import  ：</p>
+<p><img src="/.io//Users\神造诣\AppData\Roaming\Typora\typora-user-images\image-20230428194842939.png" alt="image-20230428194842939"></p>
+<p><img src="/.io//Users\神造诣\AppData\Roaming\Typora\typora-user-images\image-20230428194855361.png" alt="image-20230428194855361"></p>
+<h3 id="python如何不换行输出x"><a href="#python如何不换行输出x" class="headerlink" title="python如何不换行输出x"></a>python如何不换行输出x</h3><p><strong>指定end&#x3D;</strong></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;这是要输出的内容&quot;</span>,end=<span class="string">&#x27; &#x27;</span>);</span><br><span class="line"><span class="comment">#python3.0默认end=&#x27;\n&#x27;即默认换行</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>()函数格式为：</span><br><span class="line"><span class="built_in">print</span>(*objects, sep=<span class="string">&#x27; &#x27;</span>, end=<span class="string">&#x27;\n&#x27;</span>, file=sys.stdout,flush=<span class="literal">False</span>)</span><br><span class="line">sep表示间隔多个对象，默认为空格</span><br><span class="line">end表示输出结果以什么为结束符，默认为\n</span><br><span class="line">file表示要写入的文件对象</span><br></pre></td></tr></table></figure>
+
+<h3 id="python如何判断是否为某个类型"><a href="#python如何判断是否为某个类型" class="headerlink" title="python如何判断是否为某个类型"></a>python如何判断是否为某个类型</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># isistance(name,type)</span></span><br><span class="line">e.g: isistance(a,<span class="built_in">int</span>)<span class="comment">#判断是否为整数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># type(),返回类型名称</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="迭代器-amp-生成器"><a href="#迭代器-amp-生成器" class="headerlink" title="迭代器&amp;生成器"></a>迭代器&amp;生成器</h3> <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://shenzaoyi.github.io">shenzaoyi</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://shenzaoyi.github.io/2023/04/15/python%20100%20days/">https://shenzaoyi.github.io/2023/04/15/python%20100%20days/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://shenzaoyi.github.io" target="_blank">SHENZAOYI'BLOG</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/04/19/session%20cookie%20token/" title="session cookie token"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">session cookie token</div></div></a></div><div class="next-post pull-right"><a href="/2023/04/15/mysql/" title="mysql"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">mysql</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">shenzaoyi</div><div class="author-info__description">月落乌啼霜满天</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#python-100-days"><span class="toc-number">1.</span> <span class="toc-text">python 100 days</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#range"><span class="toc-number">1.0.1.</span> <span class="toc-text">range()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="toc-number">1.0.2.</span> <span class="toc-text">装饰器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#random%E5%BA%93"><span class="toc-number">1.0.3.</span> <span class="toc-text">random库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#lambda%E5%87%BD%E6%95%B0"><span class="toc-number">1.0.4.</span> <span class="toc-text">lambda函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#time%E5%BA%93"><span class="toc-number">1.0.5.</span> <span class="toc-text">time库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PyInstaller%E5%BA%93"><span class="toc-number">1.0.6.</span> <span class="toc-text">PyInstaller库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python-import"><span class="toc-number">1.0.7.</span> <span class="toc-text">python import</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E5%A6%82%E4%BD%95%E4%B8%8D%E6%8D%A2%E8%A1%8C%E8%BE%93%E5%87%BAx"><span class="toc-number">1.0.8.</span> <span class="toc-text">python如何不换行输出x</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#python%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E4%B8%BA%E6%9F%90%E4%B8%AA%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.9.</span> <span class="toc-text">python如何判断是否为某个类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8-amp-%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">1.0.10.</span> <span class="toc-text">迭代器&amp;生成器</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/06/something/" title="无题">无题</a><time datetime="2023-10-06T13:29:14.515Z" title="发表于 2023-10-06 21:29:14">2023-10-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/06/%E8%AD%A6%E4%B8%96%E6%81%92%E8%A8%80by%E6%B2%A1%E6%9C%89%E7%89%88%E6%9D%83%E5%8F%AF%E8%A8%80/" title="无题">无题</a><time datetime="2023-10-06T13:21:09.070Z" title="发表于 2023-10-06 21:21:09">2023-10-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/06/%E6%95%B0%E7%94%B5/" title="数电">数电</a><time datetime="2023-10-06T08:30:55.833Z" title="发表于 2023-10-06 16:30:55">2023-10-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/17/gun/" title="无题">无题</a><time datetime="2023-09-17T08:04:41.201Z" title="发表于 2023-09-17 16:04:41">2023-09-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/08/30/%E7%AE%97%E6%B3%95/" title="算法">算法</a><time datetime="2023-08-30T04:35:04.288Z" title="发表于 2023-08-30 12:35:04">2023-08-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By shenzaoyi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
