@@ -55,7 +55,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-12-08 15:30:37'
+  postUpdate: '2023-12-15 23:11:16'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -159,7 +159,63 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="SHENZAOYI'BLOG"><span class="site-name">SHENZAOYI'BLOG</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">SHENZAOYI'BLOG</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/26/golang/go/" title="go">go</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-26T00:11:07.538Z" title="发表于 2023-07-26 08:11:07">2023-07-26</time></span></div><div class="content">goGo语言基础
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="SHENZAOYI'BLOG"><span class="site-name">SHENZAOYI'BLOG</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">SHENZAOYI'BLOG</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/10/06/%E6%95%B0%E7%94%B5/" title="数电">数电</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-10-06T08:30:55.833Z" title="发表于 2023-10-06 16:30:55">2023-10-06</time></span></div><div class="content">数电基础知识数字信号和逻辑信号
+数制和转化进制转换举例
+二进制到十进制
+
+多项式替代法，按权展开
+
+
+十进制到二进制
+
+整数采取除二列余，逆序排序，小数采取乘2取整，顺序排序：原来都为递归的思想：(10) &#x3D; (5) * 2 ……0 ; (5) &#x3D; (2) * 2 ……1; (2) &#x3D; (1) *2 ……0; &#x3D;&#x3D;&gt; 
+(10) &#x3D;( ( ( ((0 *2) ……1) *2 ……0 ) * 2 ……1) * 2)  ……0   &#x3D;&#x3D;&gt; 0 * 2^0 + 1 * 2^1 + 0 * 2^3 + 1 * 2^4
+
+
+
+n位二进制表示的最大数位2^n - 1
+
+
+带符号编码原码： 采用负逻辑(1代表负数表示负逻辑),最高位为符号位
+反码： 符号位和原码同，正数数值位和真值同，负数相反
+
+反码没有实际作用吗
+s
+
+补码： 正数和原码同，负数数值位为真值按位取反再加一，也就是反码加一；补码的出现是解决两个零的问题，解决了计算机中减法的计算，让减法当加法算
+补码在计算机内的运算：
+
+拓展：反码和补码的另一 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/09/17/golang/gun/" title="gun">gun</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-09-17T08:04:41.201Z" title="发表于 2023-09-17 16:04:41">2023-09-17</time></span></div><div class="content">
+gunnet&#x2F;http库启动一个web服务的过程http.LlistenAndServer(addr,handler) 首先会初始化一个server对象，然后执行该对象的ListenAndServe()方法
+func ListenAndServe(addr string, handler Handler) error &#123;    server := &amp;Server&#123;Addr: addr, Handler: handler&#125;    return server.ListenAndServe()&#125;
+
+该Serve对象的方法会监听addr对应的端口，同时如果请求到来，就调用Server对象的Serve()方法
+func (srv *Server) ListenAndServe() error &#123;    addr := srv.Addr    if addr == &quot;&quot; &#123;        addr = &quot;:http&quot;    &#125;    ln, err := net.Lis ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95/" title="算法">算法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-30T04:35:04.288Z" title="发表于 2023-08-30 12:35:04">2023-08-30</time></span></div><div class="content">算法c++ stdlstring
+构造
+
+string a = &quot;hello&quot;;
+string a(&quot;hello&quot;);
+//	拷贝构造 &amp; 移动构造:   
+string (a); string (move(a))
+  - - 元素访问  - ```cpp    - [] 和.at()，区别：.at()有边界检查    - front() , back(),    - c_str(), data()
+
+
+
+
+
+容量操作
+- empty()- size(),length(),max_size()- reserve(),resize（count），resize(count,char)//	reserver不会更改字符串大小，属于预分配内存，resize则改变字符串内容，删减或者补齐
+
+迭代器
+  ```- 比较操作  ```cpp   a == b  //	返回bool   a &lt;==&gt; b    b.compare(a)   starts_with(),ends_with();	//	判断文件后缀  contains()	//	 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/08/01/golang/gin/" title="gin">gin</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-01T13:34:35.955Z" title="发表于 2023-08-01 21:34:35">2023-08-01</time></span></div><div class="content">ginnet&#x2F;http
+
+
+
+func index()&#123;    &#125;func main()&#123;    func http.HandleFunc(&#x27;/&#x27;,index)    err := http.ListenAndServe(&#x27;8080&#x27;)	 //	监听端口&#125;
+
+
+
+// ListenAndServe always returns a non-nil error.func ListenAndServe(addr string, handler Handler) error &#123;    server := &amp;Server&#123;Addr: addr, Handler: handler&#125;    return server.ListenAndServe()&#125;//	初始化一个server对象，调用这个server对象的ListenAndServer()方法...// ListenAndServe listens on the TCP network address sr ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/07/26/golang/go/" title="go">go</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-07-26T00:11:07.538Z" title="发表于 2023-07-26 08:11:07">2023-07-26</time></span></div><div class="content">goGo语言基础
 如果导包未用会报错，局部声明未用也报错，全局变量是允许声明但不使用
 
 变量和常量声明变量var name type = value / name := type(value)var (a intb intc bool)var a,b,c int //当声明一个变量的时候，都会自动初始化为零值，指针为nil ,布尔为false//省略类型，go会自动推断var a = 15//简短的声明，不能用在全局变量的声明a := 1//go 交换值a,b = b,a//空白运算符，可用于抛弃值,是一个只写变量_ , a = 5,7//并行赋值用作多个返回值,并行：右边的值以相同顺序赋值给左边a,b = func()
@@ -323,70 +379,5 @@ a+b  ab &#x2F; a*b  ()    - 三个表达式  ```mermaid  graph LR  前缀表达�
 如何保证
 
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/19/session%20cookie%20token/" title="session cookie token">session cookie token</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-19T10:45:40.849Z" title="发表于 2023-04-19 18:45:40">2023-04-19</time></span></div><div class="content">每次都会更新token用计算的时间换存储的空间每次都会更新token
-  用计算的时间换存储的空间
-让用户知道请求的是谁及状态
-原因   — http 无状态
-为什么无状态：
-cookie是什么	http 里面的字段，键值对形式&#x2F;单个值 免输入密码，跨站请求伪造攻击
-session是什么   一种理念 ， 保存用户信息的模式，拿到session能直接登录
-token 令牌； 将信息全部打包到token里面，前端返回给后端，后端解包，不用再服务器存储内容，也可以跨浏览器。
-拿到token 能不能直接去登录
-
-问题： 为什么有18个，过期了不会删除吗
-
-cookie 数据载体
-http请求 - server set cookie(id value) - sent to client - 
-session 服务器主导
-session - (id-maxtime) 存储在数据库 - set cookie - add session(id-maxtime) - sent to client - save session (id-time)  
-用户名&amp;密码  —- 对应sess ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/15/python%20100%20days/" title="python 100 days">python 100 days</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-15T14:16:39.750Z" title="发表于 2023-04-15 22:16:39">2023-04-15</time></span></div><div class="content">python 100 days那些年遇到的报错
-
-IndentationalError :unexpected indent  检查空格把
-invalid sytantax : 语法错误
-
-range()输出一些数字
-可以省略：
-
-没有step 默认为1
-没有start 默认为0
-不包括最后一个数字，如range(4):0，1，2，3
-
-for i in range(5):
-​	0-4
-for i in range(-5,5)
--5 - 4
-for i in range (start ,end ,step) - start 开始，end 结束 ，step  - 步长
-
-range 只是一组迭代数，list()函数可转化为列表
-
-关序列的for 遍历：
-序列：列表 - 元组 - 字典 - 集合 - 字符串
-序列索引：1. 从0 开始 s[3]  2. 可以为负数，从-1 开始
-切片： sname[start: end:step]均可省略，冒号不能省，但step 可以省略冒号
-序列相加： 1. 只能是同类型，列表+列表，元组+元组	 2. 如果重复，仍然直接输出
-序列相乘： 1. 数乘 – ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/15/mysql/" title="mysql">mysql</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-15T14:16:39.747Z" title="发表于 2023-04-15 22:16:39">2023-04-15</time></span></div><div class="content">MySQL概述graph LR程序A --发送指令--&gt; 数据库管理系统;数据库管理系统 --解析指令&amp;操作文件--&gt; 文件数据库管理系统 --返回结果--&gt;程序A
-
-安装配置和启动管理员-root-zzh
-#初始化&quot;C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe&quot; initialize -secure#启动#直接终端输入mysql的地址
-
-完全卸载mysql
-mysql installer 可以卸载，但是残留的connector&#x2F;net80.32无法卸载
-
-使用工具程序安装和卸载疑难解答程序
-
-网址：程序安装和卸载疑难解答程序
-
-相当于一个程序，每次都要
-
-
-妈妈再也不用担心我删不干净软件了
-MySQL的原理
-
-Connectors &amp; Connection Pool
-Management Services &amp; U
-SQL Interface 
-Parser
-Optimizer
-Caches &amp; Buffers
-Engines:直接与文件处理相 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/15/golang/go%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" title="go面试题目">go面试题目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-04-15T14:16:39.740Z" title="发表于 2023-04-15 22:16:39">2023-04-15</time></span></div><div class="content">go 常见问题</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">shenzaoyi</div><div class="author-info__description">月落乌啼霜满天</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/06/golang/context/" title="无题">无题</a><time datetime="2023-12-06T15:02:24.764Z" title="发表于 2023-12-06 23:02:24">2023-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/06/golang/http%E6%A0%87%E5%87%86%E5%BA%93/" title="无题">无题</a><time datetime="2023-12-06T09:47:45.926Z" title="发表于 2023-12-06 17:47:45">2023-12-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" title="无题">无题</a><time datetime="2023-12-04T13:14:43.648Z" title="发表于 2023-12-04 21:14:43">2023-12-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/26/11.26/" title="无题">无题</a><time datetime="2023-11-26T06:49:17.860Z" title="发表于 2023-11-26 14:49:17">2023-11-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/12/%E8%87%AA%E7%A0%94%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="11.12">11.12</a><time datetime="2023-11-12T13:44:58.074Z" title="发表于 2023-11-12 21:44:58">2023-11-12</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
-    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">43</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-12-08T07:30:37.347Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By shenzaoyi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">shenzaoyi</div><div class="author-info__description">月落乌啼霜满天</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/15/%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB-CORS/" title="跨域资源共享-CORS">跨域资源共享-CORS</a><time datetime="2023-12-15T15:10:39.264Z" title="发表于 2023-12-15 23:10:39">2023-12-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/10/%E4%BE%8B%E4%BC%9A/12.10/" title="例会_12.10">例会_12.10</a><time datetime="2023-12-10T07:09:34.341Z" title="发表于 2023-12-10 15:09:34">2023-12-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/09/golang/gun%20by%20examples/" title="gun by examples">gun by examples</a><time datetime="2023-12-08T22:56:46.486Z" title="发表于 2023-12-09 06:56:46">2023-12-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/08/golang/go%20%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/" title="go错误处理">go错误处理</a><time datetime="2023-12-08T09:02:22.828Z" title="发表于 2023-12-08 17:02:22">2023-12-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/06/golang/context/" title="无题">无题</a><time datetime="2023-12-06T15:02:24.764Z" title="发表于 2023-12-06 23:02:24">2023-12-06</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">十一月 2023</span><span class="card-archive-list-count">9</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">十月 2023</span><span class="card-archive-list-count">15</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">九月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">八月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/07/"><span class="card-archive-list-date">七月 2023</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">47</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-12-15T15:11:16.502Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By shenzaoyi</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
